@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="hello-icon.718e70c41c3ef320beb6.png" type="image/x-icon">
+    <title>Appexy</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+    <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+    <aside id="menu-panel"
+        class="fixed top-0 right-[-260px] w-64 h-full bg-white dark:bg-gray-800 z-50 shadow-lg transition-all duration-300 p-6">
+
+        <button id="dismissBtn" class="mb-6 text-xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="flex flex-col gap-6 font-semibold">
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">Features</a>
+            <a href="#" class="menu-item">Screenshot</a>
+            <a href="#" class="menu-item">Testimonial</a>
+            <a href="#" class="menu-item">Pricing</a>
+            <a href="#" class="menu-item">Contact Us</a>
+        </nav>
+    </aside>
+    <header class="flex items-center justify-between px-10 md:px-20 py-6">
+
+        <div class="text-2xl font-bold">Appexy</div>
+
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="header-link">Home</a>
+            <a href="#" class="header-link">Features</a>
+            <a href="#" class="header-link">Screenshot</a>
+            <a href="#" class="header-link">Testimonial</a>
+            <a href="#" class="header-link">Pricing</a>
+            <a href="#" class="header-link">Contact Us</a>
+        </nav>
+        <div class="flex items-center gap-4 text-sm">
+            <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="themeSwitch" class="sr-only peer">
+
+                <div
+                    class="relative w-12 h-6 bg-gray-300 rounded-full transition-colors duration-300 peer-checked:bg-blue-600">
+
+                    <span id="toggle-ball" class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow
+transition-all duration-300 ease-in-out"></span>
+
+                </div>
+            </label>
+
+            <button id="toggleMenu" class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="#" class="hidden md:block header-link">Login</a>
+            <a href="#"
+                class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Sign
+                Up</a>
+
+        </div>
+    </header>
+    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-20 py-16">
+        <div class="max-w-xl space-y-6">
+            <h1 class="text-4xl md:text-5xl font-bold">
+                Manage Your Activity<br>
+                With <span class="text-blue-600">Appex</span>
+            </h1>
+
+            <p class="text-gray-600 dark:text-gray-300">
+                In the time of Maisenas, the land needs the spices of Runcus, which are always free and trustworthy, and Adibesking.
+
+            <div class="flex gap-4">
+                <a href="#" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Get Started
+                    Today</a>
+                <a href="#"
+                    class="px-6 py-3 border rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition">Download
+                    App</a>
+            </div>
+        </div>
+
+        <div class="mt-10 md:mt-0 md:w-1/2">
+            <img src="photo_2026-02-11_22-33-38.jpg" class="w-full max-w-sm mx-auto rounded-xl">
+        </div>
+    </section>
+
+
+    <section class="max-w-7xl mx-auto py-16 px-6">
+        <div class="text-center mb-12">
+            <h3 class="text-sm uppercase text-gray-500 dark:text-gray-400">Amazing <span class="font-bold">Features</span></h3>
+            <h2 class="text-4xl font-bold mt-3">What Makes Us Special</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="text-5xl mb-4 text-blue-600"><i class="fas fa-bolt"></i></div>
+                <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                <p class="text-gray-600 dark:text-gray-400">Experience blazing fast performance with our optimized infrastructure.</p>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="text-5xl mb-4 text-blue-600"><i class="fas fa-shield"></i></div>
+                <h3 class="text-xl font-semibold mb-2">Ultra Secure</h3>
+                <p class="text-gray-600 dark:text-gray-400">Your data is protected with enterprise-grade security measures.</p>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="text-5xl mb-4 text-blue-600"><i class="fas fa-cogs"></i></div>
+                <h3 class="text-xl font-semibold mb-2">Easy Setup</h3>
+                <p class="text-gray-600 dark:text-gray-400">Get started in minutes with our simple and intuitive setup process.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="max-w-7xl mx-auto py-16 px-6">
+        <div class="text-center mb-12">
+            <h3 class="text-sm uppercase text-gray-500 dark:text-gray-400">Simple <span class="font-bold">Pricing</span></h3>
+            <h2 class="text-4xl font-bold mt-3">Choose Your Plan</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 place-items-center">
+            <!-- Basic Plan -->
+            <div class="border rounded-xl shadow-sm p-8 dark:bg-gray-800 dark:border-gray-700 w-full">
+                <h3 class="text-lg font-semibold mb-2">Starter</h3>
+                <div class="text-blue-600 text-3xl font-bold mb-1">$9.99</div>
+                <span class="text-base font-normal text-gray-500 dark:text-gray-400">/Month</span>
+                <ul class="mt-6 space-y-3 text-left">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i>3 Projects</li>
+                    <li><i class="fas fa-database text-blue-500 mr-2"></i>100GB Storage</li>
+                    <li><i class="fas fa-users text-blue-500 mr-2"></i>5 Contacts</li>
+                    <li><i class="fas fa-globe text-blue-500 mr-2"></i>1 Domain</li>
+                    <li><i class="fas fa-headset text-blue-500 mr-2"></i>Email Support</li>
+                </ul>
+                <button
+                    class="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">Choose
+                    Plan</button>
+            </div>
+            <!-- Standard Plan (Popular) -->
+            <div
+                class="relative border-2 border-blue-600 rounded-xl shadow-md p-8 dark:bg-gray-800 dark:border-blue-500 w-full">
+                <div class="absolute -top-3 right-4 bg-pink-600 text-white text-xs px-2 py-1 rounded-full">Most Popular
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Professional</h3>
+                <div class="text-blue-600 text-3xl font-bold mb-1">$29.00</div>
+                <span class="text-base font-normal text-gray-500 dark:text-gray-400">/Month</span>
+                <ul class="mt-6 space-y-3 text-left">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i>10 Projects</li>
+                    <li><i class="fas fa-database text-blue-500 mr-2"></i>1TB Storage</li>
+                    <li><i class="fas fa-users text-blue-500 mr-2"></i>Unlimited Contacts</li>
+                    <li><i class="fas fa-globe text-blue-500 mr-2"></i>12 Domains</li>
+                    <li><i class="fas fa-headset text-blue-500 mr-2"></i>Free Support <span
+                            class="text-red-500 font-bold">24/7</span></li>
+                </ul>
+                <button
+                    class="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">Choose
+                    Plan</button>
+            </div>
+            <!-- Enterprise Plan -->
+            <div class="border rounded-xl shadow-sm p-8 dark:bg-gray-800 dark:border-gray-700 w-full">
+                <h3 class="text-lg font-semibold mb-2">Enterprise</h3>
+                <div class="text-blue-600 text-3xl font-bold mb-1">$49.00</div>
+                <span class="text-base font-normal text-gray-500 dark:text-gray-400">/Month</span>
+                <ul class="mt-6 space-y-3 text-left">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i>20 Projects</li>
+                    <li><i class="fas fa-database text-blue-500 mr-2"></i>2.5TB Storage</li>
+                    <li><i class="fas fa-users text-blue-500 mr-2"></i>Unlimited Contacts</li>
+                    <li><i class="fas fa-globe text-blue-500 mr-2"></i>18 Domains</li>
+                    <li><i class="fas fa-headset text-blue-500 mr-2"></i>Free Support</li>
+                </ul>
+                <button
+                    class="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">Choose
+                    Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="max-w-7xl mx-auto py-16 px-6">
+        <div class="text-center mb-10">
+            <h3 class="text-sm uppercase text-gray-500 dark:text-gray-400">Get <span class="font-bold">Connected</span>
+            </h3>
+            <h2 class="text-3xl font-bold">Reach Out To Us</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+            <!-- Left Side: Contact Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Bot Icon"
+                        class="w-10 h-10 mr-3">
+                    <h3 class="text-2xl font-semibold">Say Hello!</h3>
+                </div>
+                <!-- Email -->
+                <div class="mb-6">
+                    <div class="flex items-center text-blue-600 mb-1">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span class="font-semibold">Email</span>
+                    </div>
+                    <p class="text-sm ml-6"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83f4e6fbfab2c3e4eee2eaefade0ecee">[email&#160;protected]</a></p>
+                    <p class="text-sm ml-6"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99eefce1e0abd9fef4f8f0f5b7faf6f4">[email&#160;protected]</a></p>
+                </div>
+            </div>
+            <!-- Right Side: Form -->
+            <div>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <input type="text" placeholder="Your first name..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+                        <input type="text" placeholder="Last first name..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <input type="email" placeholder="Your email..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+                        <input type="text" placeholder="Type phone number..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" placeholder="Type subject..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-6">
+                        <textarea rows="5" placeholder="Type messages..."
+                            class="w-full px-4 py-2 border rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <button
+                        class="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded shadow transition flex items-center">
+                        SEND MESSAGES <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-gray-300 dark:text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 text-sm">
+            <!-- Branding & Contact -->
+            <div>
+                <h2 class="text-white text-xl font-bold mb-3 flex items-center">
+                    <i class="fas fa-window-restore mr-2"></i> WEXY
+                </h2>
+                <p class="mb-1"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7575302d2c351218141c195b161a18">[email&#160;protected]</a></p>
+                <p class="mb-3">+2012-345-6789</p>
+                <h3 class="text-white font-semibold mb-2">Follow Us</h3>
+                <div class="flex space-x-3">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-skype"></i></a>
+                </div>
+            </div>
+            <!-- About Us -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">About Us</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Support Center</a></li>
+                    <li><a href="#" class="hover:text-white">Customer Support</a></li>
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Copyright</a></li>
+                    <li><a href="#" class="hover:text-white">Popular Campaign</a></li>
+                </ul>
+            </div>
+            <!-- Our Information -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">Our Information</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Return Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white">Site Map</a></li>
+                    <li><a href="#" class="hover:text-white">Store Hours</a></li>
+                </ul>
+            </div>
+            <!-- My Account -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">My Account</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Press Inquiries</a></li>
+                    <li><a href="#" class="hover:text-white">Social Media Directories</a></li>
+                    <li><a href="#" class="hover:text-white">Images & B-roll</a></li>
+                    <li><a href="#" class="hover:text-white">Permissions</a></li>
+                    <li><a href="#" class="hover:text-white">Speaker Requests</a></li>
+                </ul>
+            </div>
+            <!-- Policy -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">Policy</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Application Security</a></li>
+                    <li><a href="#" class="hover:text-white">Software Principles</a></li>
+                    <li><a href="#" class="hover:text-white">Unwanted Software Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Responsible Supply Chain</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .header-link {
+            position: relative;
+            transition: .3s;
+        }
+
+        .header-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #2563eb;
+            transition: .3s;
+        }
+
+        .header-link:hover {
+            color: #2563eb;
+        }
+
+        .header-link:hover::after {
+            width: 100%;
+        }
+
+        .menu-item {
+            transition: .3s;
+        }
+
+        .menu-item:hover {
+            color: #2563eb;
+            transform: translateX(8px);
+        }
+    </style>
+
+
+    <script>
+
+        const html = document.documentElement
+        const toggle = document.getElementById('themeSwitch')
+        const ball = document.getElementById('toggle-ball')
+
+
+        // ===== Load Theme =====
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark')
+            toggle.checked = true
+            ball.style.transform = "translateX(24px)"
+        }
+
+
+        // ===== Toggle Theme =====
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                html.classList.add('dark')
+                ball.style.transform = "translateX(24px)"
+                localStorage.setItem('theme', 'dark')
+            } else {
+                html.classList.remove('dark')
+                ball.style.transform = "translateX(0px)"
+                localStorage.setItem('theme', 'light')
+            }
+        })
+
+
+        // ===== Sidebar Menu =====
+        const toggleMenu = document.getElementById("toggleMenu")
+        const dismissBtn = document.getElementById("dismissBtn")
+        const menuPanel = document.getElementById("menu-panel")
+        const backdrop = document.getElementById("backdrop")
+
+        toggleMenu.onclick = () => {
+            menuPanel.style.right = "0px"
+            backdrop.classList.remove("hidden")
+        }
+
+        dismissBtn.onclick = () => {
+            menuPanel.style.right = "-260px"
+            backdrop.classList.add("hidden")
+        }
+
+        backdrop.onclick = () => {
+            menuPanel.style.right = "-260px"
+            backdrop.classList.add("hidden")
+        }
+
+    </script>
+
+</body>
+
+</html>
